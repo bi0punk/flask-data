@@ -17,6 +17,9 @@ app.config['MYSQL_DATABASE_USER']='sysbot'
 app.config['MYSQL_DATABASE_PASSWORD']='abc1'
 app.config['MYSQL_DATABASE_DB']='terremotos'
 mysql_db.init_app(app)
+
+
+
 @app.route('/')
 def build_plot():
 
@@ -35,18 +38,24 @@ def build_plot():
     print(data_list)
 
 
+    sql2 = "select magMs from Terremotos"
+    
 
-
-
-
-
-
-
+    conexion = mysql_db.connect()
+    cursor= conexion.cursor()
+    cursor.execute(sql2)
+    data = cursor.fetchall()
+    conexion.commit()
+    conexion.close()
+    data_mag = []
+    for i in data:   
+        data_mag.append(i)
+    print(data_mag)
 
 
     img = io.BytesIO()
-    mag_y = [1,2,3,4,5]
-    year_x = [1,2,3,4,5]
+    mag_y = data_mag
+    year_x = data_list
     plt.plot(year_x,mag_y)
     plt.xlabel('AÑO')
     plt.ylabel('MAGNITUD')
