@@ -19,7 +19,9 @@ app.config['MYSQL_DATABASE_DB']='terremotos'
 mysql_db.init_app(app)
 @app.route('/')
 def build_plot():
-    sql = "select `fec_locTerr` from `Terremotos`  order by `fec_locTerr`" 
+
+    sql = "SELECT YEAR(`fec_locTerr`) from `Terremotos`"
+    
 
     conexion = mysql_db.connect()
     cursor= conexion.cursor()
@@ -30,7 +32,7 @@ def build_plot():
     data_list = []
     for i in data:   
         data_list.append(i)
-    """ print(data_list) """
+    print(data_list)
 
 
 
