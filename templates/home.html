@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DATA EARTH - Chile</title>
+  <meta name="description" content="Mirror server for GNU/Linux distributions and other software, from University of La frontera, Temuco, Chile.">
+  <link rel="canonical" href="https://mirror.ufro.cl/">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+
+</head>
+<body>
+
+<nav>
+  <div class="container d-flex">
+    <a href="">EARTHQUAKE</a>
+    <span id="usage" class="">
+      <img src="reports_files/usage.svg" alt="usage">
+      Usage: <span>9.53TiB / 10.74TiB (free: 759.34GiB)</span>
+    </span>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+<div class="container d-flex mirror-list">
+
+  <div class="mirror-card">
+    <div class="mirror-header d-flex">
+      
+
+      Ultimos Terremotos
+
+      <div class="mirror-header-icons">
+        <a href="https://mirror.ufro.cl/ubuntu/" title="Explore repository files" target="_blank" class="mirror-browse-link">
+          <img src="reports_files/folder.svg" alt="folder">
+        </a>
+        <a href="#" title="Show repository information" class="mirror-help">
+          <img src="reports_files/help.svg" alt="help">
+        </a>
+      </div><!-- /.mirror-header-icons -->
+    </div><!-- /.mirror-header -->
+   <img src="{{grafico}}" alt="" height="554" width="554">
+  </div>
+
+
+  <div class="mirror-card">
+    <div class="mirror-header d-flex">
+      <div class="mirror-title">
+        <a href="https://zorinos.com/" class="mirror-link" target="_blank" title="Go to ZorinOS ISOs website">
+          <img src="reports_files/zorinos.png" alt="logo" class="mirror-logo">
+          <span class="mirror-name">ZorinOS ISOs</span>
+        </a>
+        <span title="Official mirror" class="mirror-official">
+          <img src="reports_files/official.png" alt="official">
+        </span>
+      </div><!-- /.mirror-title -->
+
+      <div class="mirror-header-icons">
+        <a href="https://mirror.ufro.cl/zorinos-isos/" title="Explore repository files" target="_blank" class="mirror-browse-link">
+          <img src="reports_files/folder.svg" alt="folder">
+        </a>
+        <a href="#" title="Show repository information" class="mirror-help">
+          <img src="reports_files/help.svg" alt="help">
+        </a>
+      </div><!-- /.mirror-header-icons -->
+    </div><!-- /.mirror-header -->
+
+    <div class="mirror-body">
+      <div class="d-flex">
+        <div><img src="reports_files/updated.svg" alt="" title="Last update time"> <span>Updated:</span></div>
+        <div class="ml-auto mirror-last-update">2h ago</div>
+      </div>
+       <div class="d-flex mirror-usage">
+        <div><img src="reports_files/usage_b.svg" alt="" title="Disk usage"> <span>Usage:</span></div>
+        <div class="ml-auto mirror-usage-val">29.70GiB</div>
+      </div>
+      <div class="d-flex">
+        <div><img src="reports_files/status.svg" alt="" title="Status"> <span>Status:</span></div>
+        <div class="ml-auto mirror-status">ready</div> 
+      </div>
+    </div><!-- /.mirror-body -->
+  </div>
+</div>
+<div class="loading hidden">Loading...</div>
+
+<footer class="container">
+  <hr>
+  <div>
+    <a href="https://www.ufro.cl/" target="_blank">Systec Data Chile</a> © 2020.
+    <a href="https://dinfo.ufro.cl/" target="_blank">arepico</a> -
+    <a href="http://dci.ufro.cl/" target="_blank">arepico</a>.
+  </div>
+  <div>
+    Maintained by
+    <a href="www.googl.cl">
+      Bi0puNK</a>.
+  </div>
+  <div>
+    <span class="mirror-generated">Content generated in <span>573.0850</span> ms -</span>
+    Sources: <a href="https://github.com/Mirror-UFRO/mirror-ufro-front">Front</a>,
+    <a href="https://github.com/Mirror-UFRO/mirror-ufro-status/">Back</a>.
+  </div>
+</footer>
+
+
+<template>
+  <div class="mirror-card">
+    <div class="mirror-header d-flex">
+      <div class="mirror-title">
+        <a href="#" class="mirror-link" target="_blank" title="Go to mirrorname website">
+          
+          <span class="mirror-name">kjkjkjkjk</span>
+        </a>
+        <span title="Official mirror" class="mirror-official hidden">
+          <img src="reports_files/official.png" alt="official">
+        </span>
+      </div><!-- /.mirror-title -->
+
+      <div class="mirror-header-icons">
+        <a href="#" title="Explore repository files" target="_blank" class="mirror-browse-link">
+          <img src="reports_files/folder.svg" alt="folder">
+        </a>
+        <a href="#" title="Show repository information" class="mirror-help">
+          <img src="reports_files/help.svg" alt="help">
+        </a>
+      </div><!-- /.mirror-header-icons -->
+    </div><!-- /.mirror-header -->
+
+    <div class="mirror-body">
+      <div class="d-flex">
+        <div><img src="reports_files/updated.svg" alt="updated" title="Last update time"> <span>Updated:</span></div>
+        <div class="ml-auto mirror-last-update"></div>
+      </div>
+      <div class="d-flex mirror-usage">
+        <div><img src="reports_files/usage_b.svg" alt="updated" title="Disk usage"> <span>Usage:</span></div>
+        <div class="ml-auto mirror-usage-val"></div>
+      </div>
+      <div class="d-flex">
+        <div><img src="reports_files/status.svg" alt="updated" title="Status"> <span>Status:</span></div>
+        <div class="ml-auto mirror-status"></div>
+      </div>
+    </div><!-- /.mirror-body -->
+  </div>
+</template>
+
+<script src="/js/app.js"></script>
+<script src="js/status.js"></script>
+<script src="js/config.js"></script>
+
+
+
+</body></html>
